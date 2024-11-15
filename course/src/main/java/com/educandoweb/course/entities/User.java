@@ -1,6 +1,8 @@
 package com.educandoweb.course.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -8,6 +10,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_user")
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -23,14 +27,6 @@ public class User implements Serializable {
     private String phone;
 
     private String password;
-
-    public User(Long id, String name, String email, String phone, String password) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.password = password;
-    }
 
     public Long getId() {
         return id;
