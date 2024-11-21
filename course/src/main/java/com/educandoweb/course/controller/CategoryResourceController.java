@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping(value = "/categories")
@@ -26,7 +26,7 @@ public class CategoryResourceController {
         return ResponseEntity.ok().body(list);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<Category> findById(Long id){
         Category obj = service.findById(id);
         return new ResponseEntity<>(obj, HttpStatus.OK);
