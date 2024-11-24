@@ -31,6 +31,4 @@ public class CategoryResourceController {
         Category obj = service.findById(id);
         return new ResponseEntity<>(obj, HttpStatus.OK);
     }
-
-
 }
