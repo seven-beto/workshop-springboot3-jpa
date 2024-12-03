@@ -45,5 +45,4 @@ public class UserResourceController {
         obj = userService.update(id, obj);
         return ResponseEntity.ok().body(obj);
     }
-
 }
